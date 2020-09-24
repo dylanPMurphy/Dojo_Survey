@@ -7,41 +7,38 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@codolog/form@1.0.0/dist/form.min.css">
 </head>
 <body>
-    <h1>Dojo Survey</h1>
-    <form class='form' action="/result", method="POST">
-        {% csrf_token %}
-        <label for="first_name">First Name:</label>
-        <input type="text" id="first_name" name="first_name">
-        <br>
-        <label for="last_name">Last Name:</label>
-        <input type="text" id="last_name" name="last_name">
-        <br>
-
-
-        <label for="Birthday">Birthday</label>
-        <input type="date" id="Birthday" name="Birthday">
-        <br>
-
-        <input type="radio" id="male" name="gender" value="male">
-        <label for="male">Male</label>
-        <input type="radio" id="female" name="gender" value="female">
-        <label for="female">Female</label>
-        <input type="radio" id="other" name="gender" value="other">
-        <label for="other">Other</label>
-        <br>
-
-        <label for="Favorite">Favorite Language:</label>
-        <select name="Favorite" id="Favorite">
-            <option value="Javascript">Javascript</option>
-            <option value="Java">Java</option>
-            <option value="C">C</option>
-            <option value="Python">Python</option>
-            
-        </select>
-
-        <br>
-        <input type="submit" value="Submit">
-    </form>
+    <div id="container" style="width: 970px;">
+        <h1>Dojo Survey</h1>
+        <form class='form' action="/result", method="POST">
+            {% csrf_token %}
+            <label class='form'for="first_name">First Name:</label>
+            <input class='form'type="text" id="first_name" name="first_name">
+            <br>
+            <label class='form'for="last_name">Last Name:</label>
+            <input class='form'type="text" id="last_name" name="last_name">
+            <br>
+            <label class='form'for="Birthday">Birthday</label>
+            <input class='form'type="date" id="Birthday" name="Birthday">
+            <br>
+            <input class='form'type="radio" id="male" name="gender" value="male">
+            <label class='form'for="male">Male</label>
+            <input class='form'type="radio" id="female" name="gender" value="female">
+            <label class='form'for="female">Female</label>
+            <input class='form'type="radio" id="other" name="gender" value="other">
+            <label class='form'for="other">Other</label>
+            <br>
+            <label class='form' for="Favorite">Favorite Language:</label>
+            <select class='form'name="Favorite" id="Favorite">
+                <option class='form'value="Javascript">Javascript</option>
+                <option class='form'value="Java">Java</option>
+                <option class='form'value="C">C</option>
+                <option class='form'value="Python">Python</option>
+            </select>
+            <br>
+            <input class='form' type="submit" value="Submit">
+        </form>
+    </div>
+    
 
 </body>
 </html>
