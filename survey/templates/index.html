@@ -9,7 +9,7 @@
 <body>
     <div id="container" style="width: 970px;">
         <h1>Dojo Survey</h1>
-        <form class='form' action="/result", method="POST">
+        <form class='form' action="/submit", method="POST">
             {% csrf_token %}
             <label class='form'for="first_name">First Name:</label>
             <input class='form'type="text" id="first_name" name="first_name">
