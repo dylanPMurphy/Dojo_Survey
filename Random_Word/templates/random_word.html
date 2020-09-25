@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number</title>
+</head>
+<body>
+    <h1>Random Number Generator (Attempt #{{request.session.counter}})</h1>
+    <h3>{{request.session.random_word}}</h3>
+
+    <form action="generate" method="post">
+        {% csrf_token %}
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>

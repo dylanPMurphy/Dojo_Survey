@@ -1,6 +1,17 @@
-from django.shortcuts import render, HttpResponse
-
+from django.shortcuts import render, HttpResponse, redirect
+from django.utils.crypto import get_random_string
 
 # Create your views here.
+
 def index(request):
-    return HttpResponse("This is a place-holder for the random word site")
+    
+    request.session['random_word'] = get_random_string(length=14)
+    return render(request, 'random_word.html')
+
+def generate(request):
+    request.session['random_word'] = get_random_string(length=14)
+    request.session['counter'] += 1
+    return redirect('/random_word')
+def reset(request):
+    request.session['counter'] = 1
+    return redirect('/random_word')
